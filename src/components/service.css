@@ -1,0 +1,11 @@
+@media screen and (max-width: 479px) {
+    .heading h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+    .heading div {
+        height: 2.5px;
+        width: 12rem;
+        margin-top: -0.7px;
+    }
+}

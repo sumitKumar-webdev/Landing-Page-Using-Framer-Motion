@@ -1,0 +1,21 @@
+@media screen and (max-width: 479px) {
+    .heading h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+    .heading div {
+        height: 2.5px;
+        width: 6rem;
+        margin-top: -0.6px;
+    }
+    .address p {
+        font-size: 1rem;
+    }
+    .map{
+        height: 12rem;
+    }
+    .button{
+        font-size: 0.8rem;
+        padding: 0.8rem;
+    }
+}

@@ -1,0 +1,23 @@
+@media screen and (max-width: 479px) {
+    .heading h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+    .heading div {
+        height: 2.5px;
+        width: 10rem;
+        margin-top: -0.7px;
+    }
+    .WhyUsCards{
+        width: 100%;
+        margin-top: 5rem;
+        gap: 6rem;
+    }
+    .WhyUsCards .title{
+        font-size: 0.8rem;
+    }
+    .WhyUsCards .img {
+        height: 6rem;
+        width: 6rem;
+    }
+}
