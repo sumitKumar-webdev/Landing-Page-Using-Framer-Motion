@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import './ChooseUS.css'
+import './ChooseUs.css'
 
 const reasons = [
   {
