@@ -11,7 +11,7 @@ export const Card = ({
   return(
      <motion.div
               whileHover={{ scale: 1.05 }}
-              className="bg-white p-2 rounded-xl relative shadow card hover:shadow-lg "
+              className="bg-white p-2 rounded-xl relative flex flex-col justify-center items-center shadow card hover:shadow-lg "
               onClick={() => window.open("https://wa.me/918178830011", "_blank")}
               onMouseEnter={()=>setShow(true)}
               onMouseLeave={()=>setShow(false)}
@@ -28,7 +28,7 @@ export const Card = ({
         Enquire on WhatsApp
       </motion.a>}
 
-                <img src={img} className='lg:w-[90%] md:w-[40%] sm:w-[30%] object-cover' alt={title} />
+                <img src={img} className='lg:w-[65%] md:w-[60%] sm:w-[50%] object-cover' alt={title} />
               <h3 className="text-xl font-semibold">{title}</h3>
       </motion.div>
    )

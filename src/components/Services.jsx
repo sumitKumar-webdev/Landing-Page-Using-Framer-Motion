@@ -3,37 +3,65 @@ import { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform } from "framer-motion";
 import { Card } from "./Card";
 import './service.css'
+// import '../img(1)'
 
 const services = [
   {
     title: 'Old Motor Graders',
-    img : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThn7eJqdPo52ErJOFKMkfo2fIy7biFgO3eRg&s'
+    img : './img (1).jpg'
   },
   {
     title: 'Old JCB Loader',
-    img : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThn7eJqdPo52ErJOFKMkfo2fIy7biFgO3eRg&s'
+    img : './img (2).jpg'
   },
   {
     title: 'Motor Graders',
-  img : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThn7eJqdPo52ErJOFKMkfo2fIy7biFgO3eRg&s'
+  img : './img (3).jpg'
   },
   {
     title: 'Old Piling Machine',
-  img : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThn7eJqdPo52ErJOFKMkfo2fIy7biFgO3eRg&s'
+  img : './img (4).jpg'
   },
   {
     title: 'Old Piling Machine',
-img : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThn7eJqdPo52ErJOFKMkfo2fIy7biFgO3eRg&s'
+img : './img (5).jpg'
   },
   {
     title: 'Old Piling Machine',
-    img : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThn7eJqdPo52ErJOFKMkfo2fIy7biFgO3eRg&s'
+    img : './img (6).jpg'
+  },
+  {
+    title: 'Old Piling Machine',
+    img : './img (7).jpg'
+  },
+  {
+    title: 'Old Piling Machine',
+    img : './img (8).jpg'
   },
  
 ];
 
+
 export default function Services() {
   const [index, setIndex] = useState(0)
+  const [img, setImg] = useState(3)
+
+  useEffect(() => {
+    const updateImgCount = () => {
+      if (window.matchMedia('(max-width: 479px)').matches) {
+        setImg(1);
+      } else {
+        setImg(3);
+      }
+    };
+    updateImgCount();
+    
+    window.addEventListener('resize', updateImgCount);
+    return () => {
+      window.removeEventListener('resize', updateImgCount);
+    };
+
+  }, []);
 
 
 
@@ -69,11 +97,11 @@ export default function Services() {
         <div className="overflow-hidden max-w-7xl py-8 mx-auto">
         <div 
         style={{
-          width: `${(services.length*100)/3}%`,
-          transform:`translateX(-${(100/6)*index}%)`,
+          width: `${(services.length*100)/img}%`,
+          transform:`translateX(-${(100/8)*index}%)`,
           
         }}
-       className="flex transition-transform duration-700 ease-in-out">
+       className="flex Imgcontainer transition-transform duration-700 ease-in-out">
           {services.map((service, idx) => (
             <div
             className="w-full sm:w-1/2 lg:w-1/3 px-2" 

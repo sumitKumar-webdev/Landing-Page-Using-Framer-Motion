@@ -1,7 +1,15 @@
 import { easeInOut, motion } from "framer-motion";
 import { ArrowDown, Mouse } from 'lucide-react';
+import './Hero.css'
 
 export default function Hero() {
+  const handleClick = () =>{
+    const aboutSection = document.querySelector('#about')
+    aboutSection.scrollIntoView({
+      behavior:'smooth',
+      block: 'center'
+    })
+  }
   return (
     <section className="bg-[#0A1F44] relative overflow-x-hidden  text-white min-h-screen flex flex-col items-center justify-center px-6 text-center ">
       <motion.h1
@@ -30,11 +38,14 @@ export default function Hero() {
       >
         Enquire on WhatsApp
       </motion.a>
-
+      
+      
       <motion.div
       animate={{y:[-20,20,-20]}}
       transition={{duration:2, repeat:Infinity, ease:'easeInOut',}}
-       className="flex flex-col items-center absolute bottom-10 justify-center flex-1">
+       className="flex mouseBtn flex-col items-center absolute bottom-10 justify-center flex-1"
+       onClick={handleClick}
+       >
         Scroll Down to Explore
       <ArrowDown size={40}/>
     </motion.div>
