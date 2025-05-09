@@ -34,6 +34,7 @@ The landing page serves as a simple business website with essential sections lik
 
 ## 📷 Preview (Vercel Link)
 
+https://landing-page-using-framer-m-git-b9cc0f-sumits-projects-9e5c2a29.vercel.app/
 
 ---
 
